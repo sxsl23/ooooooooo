@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nlgm</title>
+</head>
+</body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedida de Matrimonio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color:floralwhite
+         
+        }
+
+        #content {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #btn-yes {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+        }
+
+        #btn-no {
+            background-color: #f44336;
+            color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Holaa amor</h1>
+        <p>¿Aceptarías casarte conmigo?</p>
+
+        <div class="btn-container">
+            <button id="btn-yes" onclick="mostrarRespuesta('oficialmente estamos casados <3 ')">Sip</button>
+            <button id="btn-no" onclick="mostrarRespuesta('soy un naco y estupido, vdd')">Nop</button>
+        </div>
+
+        <p id="respuesta" style="display:none; margin-top:30px;"></p>
+    </div>
+
+    <script>
+        function mostrarRespuesta(respuesta) {
+            document.getElementById("respuesta").innerHTML = respuesta;
+            document.getElementById("respuesta").style.display = "block";
+            document.getElementById("btn-yes").disabled = true;
+            document.getElementById("btn-no").disabled = true;
+        }
+    </script>
+</body>
+</html>
